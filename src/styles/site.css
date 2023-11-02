@@ -72,10 +72,6 @@ body {
     justify-content: end;
     text-transform: uppercase;
 
-    background-image: linear-gradient(to right,
-            rgba(249, 249, 249, 0) 10%,
-            rgba(249, 249, 249, 0.95) 60%),
-        url("../images/front_background.png");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,7 +95,7 @@ body {
 .gift__banner {
     height: 100px;
     width: 70px;
-    background-image: url("../images/GiftTab.svg");
+    
     background-repeat: no-repeat;
     background-size: cover;
 

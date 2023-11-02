@@ -1,0 +1,61 @@
+---
+const { to, from } = Astro.props;
+import backgroundImage from "../images/front_background.png";
+import giftIcon from "../images/GiftTab.svg";
+import { getImage } from "astro:assets";
+const optimizedBackgroundImage = await getImage({ src: backgroundImage });
+const optimizedgiftIcon = await getImage({ src: giftIcon });
+---
+
+<div class="card">
+    <div class="card__inner">
+        <div
+            class="card__face card__face--front"
+            style={`background-image: linear-gradient(to right,
+                rgba(249, 249, 249, 0) 10%,
+                rgba(249, 249, 249, 0.95) 60%),
+                url('${optimizedBackgroundImage.src}')`}
+        >
+            <div class="card__content">
+                <div class="card__header">
+                    Happy Birthday {to}!!
+                </div>
+            </div>
+        </div>
+        <div class="card__face card__face--back">
+            <div class="card__content">
+                <div class="card__body">
+                    <p>
+                        Happy 24<sup>th</sup> birthday Echo! Despite all the bad
+                        things in Valorant, you were one of the best things that
+                        happened to me and am so glad to have met someone as fun
+                        and kind as you (and insanely cracked ... them shots be
+                        crispy)! I hope 24 is filled with happiness and lots and
+                        lots of aces ^-^. Can't wait for our next Valorant
+                        adventure hehe.
+                    </p><br />
+                    <span>
+                        From: {from}
+                    </span>
+                    <div class="card__footer">
+                        <a
+                            target="_blank"
+                            href="https://www.amazon.com/gp/r.html?C=23J4QFP74FONO&M=urn:rtn:msg:2023110202151061ed426d25a5464a82c5e96604d0p0na&R=B78GSY5H3438&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fg%2F7GDBADPDU8P89H%3Fref_%3Dpe_906650_284786740&H=GWDQXAJ6BEOOHQPSVMUPCGI3RZEA&ref_=pe_906650_284786740"
+                        >
+                            <div class="gift__banner"
+                            style={`background-image: url('${optimizedgiftIcon.src}')`}></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const card = document.querySelector(".card__inner");
+
+    card!.addEventListener("click", function (e) {
+        card!.classList.toggle("is-flipped");
+    });
+</script>
