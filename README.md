@@ -1,5 +1,7 @@
 # Astro Starter Kit: Minimal
 
+Site URL: https://oahmed-os.github.io/card_echo/
+
 ```sh
 npm create astro@latest -- --template minimal
 ```
