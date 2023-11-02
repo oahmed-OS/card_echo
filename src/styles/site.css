@@ -95,7 +95,7 @@ body {
 .gift__banner {
     height: 100px;
     width: 70px;
-    
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -114,6 +114,7 @@ body {
     }
 
     .card {
+        margin: 50px auto 0;
         width: 400px;
         height: 600px;
     }
